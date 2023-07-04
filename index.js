@@ -4,7 +4,7 @@ const cors = require('cors');
 const bodyparser = require ('body-parser')
 const nodemailer = require('nodemailer');
 const app = express();
-const port = Proxy.env.PORT
+const port = process.env.PORT
 
 app.use(cors());
 app.use(express.json());
