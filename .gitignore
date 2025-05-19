@@ -24,3 +24,4 @@ yarn-error.log*
 
 # variables de entorno
 .env
+.vercel
