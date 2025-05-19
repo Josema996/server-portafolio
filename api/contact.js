@@ -1,7 +1,8 @@
-const nodemailer = require('nodemailer');
-require('dotenv').config();
+// api/contact.js
 
-module.exports = async (req, res) => {
+import nodemailer from 'nodemailer';
+
+export default async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ message: 'Only POST requests allowed' });
   }
@@ -37,4 +38,4 @@ module.exports = async (req, res) => {
     console.error(error);
     res.status(500).json({ message: 'Error al enviar el mensaje' });
   }
-};
+}
