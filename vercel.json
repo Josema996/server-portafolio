@@ -1,17 +1,9 @@
 {
-    "builds": [
-      {
-        "src": "./index.js",
-        "use": "@vercel/node"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "/"
-      }
-    ],
-    "env": {
-      "PORT": "3001"
-    }
-  }
+  "version": 2,
+  "builds": [
+    { "src": "api/contact.js", "use": "@vercel/node" }
+  ],
+  "routes": [
+    { "src": "/api/contact", "dest": "api/contact.js" }
+  ]
+}
