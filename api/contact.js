@@ -1,8 +1,8 @@
-// api/contact.js
+// api/contact.js para Vercel
+const nodemailer = require('nodemailer');
+require('dotenv').config();
 
-import nodemailer from 'nodemailer';
-
-export default async function handler(req, res) {
+module.exports = async (req, res) => {
   if (req.method !== 'POST') {
     return res.status(405).json({ message: 'Only POST requests allowed' });
   }
@@ -38,4 +38,4 @@ export default async function handler(req, res) {
     console.error(error);
     res.status(500).json({ message: 'Error al enviar el mensaje' });
   }
-}
+};
